@@ -14,7 +14,7 @@ class About(models.Model):
     image = models.ImageField(upload_to='static/images/author')
     owner = models.ForeignKey(User, on_delete=models.CASCADE)
     location = models.CharField(max_length=250, blank=False)
-    phone_number = models.IntegerField(blank=False)
+    phone_number = models.CharField(max_length=250, blank=True)
     email = models.EmailField(max_length=250, blank=True)
     fb_link = models.URLField(max_length=250, blank=True)
     twitter_link = models.URLField(max_length=250, blank=True)
